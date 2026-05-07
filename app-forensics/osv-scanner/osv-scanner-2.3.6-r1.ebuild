@@ -21,7 +21,8 @@ post_src_unpack() {
 }
 
 
-src_compile() {go build -mod=mod ./cmd/osv-scanner || die "compile failed"
+src_compile() {
+	go build -mod=mod ./cmd/osv-scanner || die "compile failed"
 
 }
 src_install() {
